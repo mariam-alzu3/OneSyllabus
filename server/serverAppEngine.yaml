@@ -1,0 +1,5 @@
+runtime: nodejs16
+service: server
+entrypoint: node index.js
+env_variables:
+  DB_ADDRESS: "/cloudsql/onesyllabus-379218:us-central1:database-3350-team-18"

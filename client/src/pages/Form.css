@@ -1,0 +1,12 @@
+#GaDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.labelSpace{
+    padding-right: 15cm;
+}
+
+.textSpace{
+    padding-right: 8cm;
+}

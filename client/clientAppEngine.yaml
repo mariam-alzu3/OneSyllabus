@@ -1,0 +1,13 @@
+runtime: python39
+service: default
+
+handlers:
+  # Serve static files
+  - url: /(.*\.(js|css|png|jpg|pdf|ico|svg|woff2))$
+    static_files: build/\1
+    upload: build/.*\.(js|css|png|jpg|pdf|ico|svg|woff2)$
+
+  # Redirect all other requests to React's index.html file
+  - url: /.*
+    static_files: build/index.html
+    upload: build/index.html

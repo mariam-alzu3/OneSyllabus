@@ -1,0 +1,366 @@
+INSERT INTO COURSE
+VALUES
+('SE3353','Human-Computer Interface Design'),
+('SE3350','Software Engineering Design'),
+('ECE3375','Microprocessors and microcomputers'),
+('SE3352','Software Requirements and Analysis'),
+('SE2203','Software Design'),
+('ECE2277','Digital Logic Systems'),
+('ECE3399','Principles and Practices of Design of Electronic Systems'),
+('MSE2233','Circuits and Systems'),
+('ECE2233','Circuits and Systems'),
+('ES1021','Properties of Materials'),
+('ES1022','Engineering Statics'),
+('ES1036','Programming Fundamentals for Engineers'),
+('ES1050','Foundations of Engineering Practice'), 
+('ECE2205','Electric Circuits I'),
+('SE2250','Software Construction'),
+('SE2205','Algorithms and Data Structures for Object Oriented Design'),
+('SE2202','Scripting Language Fundamentals'),
+('SE3313','Operating Systems');
+
+INSERT INTO Prereq
+VALUES
+('SE3350','SE3352'),
+('SE3350','SE2203'),
+('ECE3375','ECE2277'),
+('ECE2233','ECE2205'),
+('SE3313','SE2203'),
+('SE3313','SE2205');
+
+INSERT INTO antireq
+VALUES
+('ECE2277','ECE3399'),
+('MSE2233','ECE2233');
+
+INSERT INTO Users
+VALUES
+('sali242@uwo.ca','Dr. Shaimaa Ali','I','ohHenry'),
+('eagleson@uwo.ca','Roy Eagleson','I','orIsIt?'),
+('ecedept@uwo.ca','Viduni','DC','dept'),
+('ecechair@uwo.ca','Mithila','AC','chair'),
+('eceprogram@uwo.ca','Mariam','PD','program'),
+('eceadmin@uwo.ca','Divija Bhargava','A','admin'),
+('kmcisaac@uwo.ca','Dr. Ken McIsaac','I','whiteboard'),
+('aouda@uwo.ca','Dr. Abdelkader Ouda','I','elevator'),
+('jagath@uwo.ca','Dr. Jagath Samarabandu','I','Jeremy'),
+('jmcleod7@uwo.ca','Dr. John Mcleod','I','chemistry'),
+('rrao@uwo.ca','Dr. Raveendra K. Rao','I','circuits'),
+('qrahman3@uwo.ca','Dr. Quazi Rahman','I','sleep'),
+('kkamalmo@uwo.ca','Dr. Khaled Badawy','I','programming'),
+('jdickin5@uwo.ca','Dr. John Dickenson','I','design')
+;
+
+INSERT INTO userAccess
+VALUES
+('sali242@uwo.ca','SE3350'),
+('eagleson@uwo.ca','SE3353'),
+('kmcisaac@uwo.ca','SE3313'),
+('aouda@uwo.ca','SE2203'),
+('aouda@uwo.ca','ES1036'),
+('sali242@uwo.ca','SE2203'),
+('jagath@uwo.ca','ES1050'),
+('aouda@uwo.ca','SE3350'),
+('jmcleod7@uwo.ca','ECE2277'),
+('jmcleod7@uwo.ca','ECE3375');
+
+INSERT INTO GAIndicators
+VALUES
+('KB1'),
+('KB2'),
+('KB3'),
+('KB4'),
+('PA1'),
+('PA2'),
+('PA3'),
+('I1'),
+('I2'),
+('I3'),
+('D1'),
+('D2'),
+('D3'),
+('D4'),
+('ET1'),
+('ET2'),
+('ET3'),
+('ITW1'),
+('ITW2'),
+('ITW3'),
+('CS1'),
+('CS2'),
+('CS3'),
+('PR1'),
+('PR2'),
+('PR3'),
+('IESE1'),
+('IESE2'),
+('IESE3'),
+('EE1'),
+('EE2'),
+('EE3'),
+('EE4'),
+('EPM1'),
+('EPM2'),
+('EPM3'),
+('EPM4'),
+('LL1'),
+('LL2');
+
+INSERT INTO CourseOutline
+VALUES
+('PR','0','2022-23','SE3353','eagleson@uwo.ca','Dr. Roy Eagleson, Ph.D.,P.Eng. ','ECE','B','519-661-2111 ext.81268','This course highlights specific material from Software Engineering and Cognitive
+Science with the purpose of designing and testing user interfaces for interactive visualization, or for supervisory control of complex systems. The course material is selected from recent papers
+in order to stay current with HCI developments and scientific research results. Although these research areas are broad, the topics covered have been selected so as to conform to emerging
+trends in HCI through the ACM and IEEE special interest groups. There is a final project which draws together additional lab demos, and allows the student to pursue a project that can
+potentially be tailored to their own research background. The course highlights the interplay between Software Engineering as an enterprise, and the importance of basic research on human
+perception and cognition to guide, inform, and inspire the development of innovative technology.','','','No textbook. Resources will be avaliable on course OWL website.','None','Any Java textbook or online resource.','4','15','0','31','50','I','','','I','','','','','','I','D','','1. Introduction to Software Engineering for Human-Computer
+Interface Design At the end of this section, students will be able to: 
+a. Understand how the Design of Human-Computer Interface
+Software requires special consideration of the special capacities and constraints of the human Perceptual, Action, and Cognitive
+System. 
+b. Understand and articulate how the constraints of the human action system impacts the set of computer-input devices.
+c. Understand and articulate how the constraints of the human perceptual system impacts the set of computer-output devices.
+d. Understand and articulate the foundational Design Guidelines for Human-Computer Interface Software.
+e. Understand how Software Engineering is conducted as an Engineering Enterprise, emphasizing the principals of Engineering, and especially Professionalism and Ethical
+considerations as being paramount.
+2. Behavioural Representations of User Tasks for Software Design
+At the end of this section, students will be able to:
+a. Understand how User Tasks are represented in the human cognitive system and how those tasks can be implemented by
+hierarchically nested sequences of human-computer interactions.
+b. Understand and be able to represent Human-Computer
+Interactions through informal functional requirements and articulate specific Use Cases with Usage Scenarios.
+c. Understand and be able to derive behavioural representations from the Users perspective as Activity Diagrams, and transform to State Diagrams.
+3. Software Architectures for HCI
+At the end of this section, students will be able to:
+a. Understand and be able to derive structural representations of software architectures that are derived from constraints specified as informal requirements.
+b. Be able to integrate diagrammatic representations of the structure of HCI architectures, and diagrammatic representation of HCI function, into Hierarchical Harel Statecharts.
+c. Understand and be able to utilize APIs for Graphical User Interfaces (GUIs) and how these constrain the Architectural Design of HCI software.
+d. Understand and be able to implement HCI software using Design Patterns that are foundations for HCI Software Architectures.
+4. User Interface Evaluation and Human Performance Metrics
+At the end of this section, students will be able to:
+d. Understand and be able to articulate the foundations of human task performance analysis.
+e. Understand and be able to articulate the various approaches to evaluating User Interfaces.
+f. Understand and be able to design methodologies for testing and evaluating Human Performance while using Human-Computer Interfaces as tools to perform tasks.','KB3
+KB2
+KB2
+KB4
+P1, P2, P3
+PA 1, PA 2
+PA2
+PA2
+D1, D2
+PA2
+D3
+D4
+KB1', 0, 0, '', '', '', '', '', '', '', '', 0, '', '', '', 0, 0), ('A','0','2020-21','SE3353','eagleson@uwo.ca','Dr. Roy Eagleson, Ph.D.,P.Eng. ','ECE','B','519-661-2111 ext.81268','This course highlights specific material from Software Engineering and Cognitive
+Science with the purpose of designing and testing user interfaces for interactive visualization, or for supervisory control of complex systems. The course material is selected from recent papers in order to stay current with HCI developments and scientific research results. Although these research areas are broad, the topics covered have been selected so as to conform to emerging trends in HCI through the ACM and IEEE special interest groups. There is a final project which draws together additional lab demos, and allows the student to pursue a project that can potentially be tailored to their own research background. The course highlights the interplay between Software Engineering as an enterprise, and the importance of basic research on human perception and cognition to guide, inform, and inspire the development of innovative technology.','','','No textbook. Resources will be avaliable on course OWL website.','None','Any Java textbook or online resource.','4','15','0','31','50','I','','','I','','','','','','I','D','','1. Introduction to Software Engineering for Human-Computer
+Interface Design At the end of this section, students will be able to:
+a. Understand how the Design of Human-Computer Interface Software requires special consideration of the special capacities and constraints of the human Perceptual, Action, and Cognitive
+System.
+b. Understand and articulate how the constraints of the human action system impacts the set of computer-input devices.
+c. Understand and articulate how the constraints of the human perceptual system impacts the set of computer-output devices.
+d. Understand and articulate the foundational Design Guidelines for Human-Computer Interface Software.
+e. Understand how Software Engineering is conducted as an
+Engineering Enterprise, emphasizing the principals of
+Engineering, and especially Professionalism and Ethical
+considerations as being paramount.
+2. Behavioural Representations of User Tasks for Software Design
+At the end of this section, students will be able to:
+a. Understand how User Tasks are represented in the human
+cognitive system and how those tasks can be implemented by
+hierarchically nested sequences of human-computer interactions.
+b. Understand and be able to represent Human-Computer
+Interactions through informal functional requirements and
+articulate specific Use Cases with Usage Scenarios.
+c. Understand and be able to derive behavioural representations from
+the Users perspective as Activity Diagrams, and transform to
+State Diagrams.
+3. Software Architectures for HCI
+At the end of this section, students will be able to:
+a. Understand and be able to derive structural representations of
+software architectures that are derived from constraints specified
+as informal requirements.
+b. Be able to integrate diagrammatic representations of the structure
+of HCI architectures, and diagrammatic representation of HCI
+function, into Hierarchical Harel Statecharts.
+c. Understand and be able to utilize APIs for Graphical User
+Interfaces (GUIs) and how these constrain the Architectural
+Design of HCI software.
+d. Understand and be able to implement HCI software using Design
+Patterns that are foundations for HCI Software Architectures.
+4. User Interface Evaluation and Human Performance Metrics
+At the end of this section, students will be able to:
+d. Understand and be able to articulate the foundations of human task
+performance analysis.
+e. Understand and be able to articulate the various approaches to
+evaluating User Interfaces.
+f. Understand and be able to design methodologies for testing and
+evaluating Human Performance while using Human-Computer
+Interfaces as tools to perform tasks.','KB3
+KB2
+KB2
+KB4
+P1, P2, P3
+PA 1, PA 2
+PA2
+PA2
+D1, D2
+PA2
+D3
+D4
+KB1', 0, 0, '', '', '', '', '', '', '', '', 0, '', '', '', 0, 0),('A','0','2022-23','SE3313','kmcisaac@uwo.ca','Dr. Ken McIsaac, P.Eng.','SE','B','519-661-2111 ext. 80562','This course provides an introduction to the fundamental principles of operating
+systems and their design issues. It explores the key structures and mechanisms of operating
+systems and ties them to real-world design choices. The design trade-offs affecting the
+performance and security are also highlighted.','By appointment.','TEB 265','None.','','Title: Operating Systems: Internals and Design Principles Author(s): William Stallings Publisher:
+Prentice Hall Edition: 9th (2018)
+ISBN: 978-0-134-67095-9
+Title: Operating System Concepts
+Author(s): Abraham Silberschatz, Peter B. Galvin, Greg Gagne Publisher: Wiley Edition: 10th
+(2018)
+ISBN: 978-1-118-06333-0','0','25','15','20','40','D','D','','D','D','','','','','D','','','1. Operating System Basics
+At the end of this section, students will be able to:
+a. Illustrate the main objectives of an operating system
+b. Understand computer architecture and organization PA2
+2. Process Management
+At the end of this section, students will be able to:
+a. Differentiate between a process and a thread KB3
+b. Understand and solve concurrency and scheduling problems PA2
+3. Memory Management
+At the end of this section, students will be able to:
+a. Differentiate between physical and virtual memory KB3
+b. Understand concepts such as paging, segmentation and swapping PA2, PA3
+4. Device Management
+At the end of this section, students will be able to:
+a. Understand how an operating system controls a collection of
+devices
+b. Demonstrate understanding of input, output and file system
+KB3
+5. Embedded Operating Systems
+At the end of this section, students will be able to:
+KB3
+a. Comprehend the characteristics of Embedded Systems KB3
+b. Differentiate between traditional operating systems and embedded
+systems
+KB3
+5. Embedded Operating Systems
+At the end of this section, students will be able to:
+a. Understand different computer system architectures such as
+Client/Server Computing and Service Oriented Architecture
+b. Identify design issues in process management for distributed
+systems
+KB3
+PA1, PA2, PA3
+5. Design project
+At the end of this section, students will be able to:
+a. Develop a design for a multi-session, multi-user networked
+client/server system
+DE1, DE2
+b. Implement a multi-session, multi-user networked client/server
+system using multiple development environments
+','KB1
+PA2
+KB3
+PA2
+KB3
+PA2, PA3
+KB3
+KB3
+KB3
+KB3
+KB3
+PA1, PA2, PA3
+DE1, DE2, ', 0, 0, '', '', '', '', '', '', '', '', 0, '', '', '', 0, 0),('A','0','2022-23','SE2203','aouda@uwo.ca','Dr. Abdelkader Ouda, Ph.D. P.Eng','SE','B','519-661-2111 ext. 81299','The main objective is to introduce students to designing software systems with emphasis on design
+concepts, strategies and their applications to domain specific software systems, using an object
+modeling language, such as Unified Modeling Language (UML) to illustrate the relevant concepts.
+The importance of design in the Software Life Cycle will be discussed. The course begins with
+coverage of the basic skills necessary in a software engineering context. Then Software design
+methods and technologies will be introduced to enable students specifying, designing, and
+implementing complex software systems.','Avaliable on OWL','ACEB 4452','None.','Bernd Bruegge, Object-Oriented Software Engineering Using UML, Patterns, and Java, 3rd
+Edition, ISBN: 0-13-606125-7, 2010, Prentice Hall.','Course notes and supplementary material will be available on OWL.','40','0','20','0','40','','D','','I','','','','','','','','','1. Introduction to Software Engineering
+At the end of this section, students will be able to:
+a. Describe the concepts, notations, methods, and methodologies of
+the software engineering.
+Taught, but Not
+Assessed
+b. Apply Object-Oriented (OO) concepts to the development of Javabased applications.
+2. Object Oriented Modeling Approach with UML
+At the end of this section, students will be able to:
+a. Use UML to formalize the requirements specification, to Identify
+objects and their behaviors, and then to produce a model of the
+system that is correct, consistent, and verifiable
+b. Optimize the class model, map associations to collections, map
+operation contracts to exceptions, and map the class model to a
+storage schema.
+3. Software design patterns
+At the end of this section, students will be able to:
+a. Identify a design pattern for each type of anticipated object design.
+b. Apply the design pattern(s) to enhance the structure and/or the
+behavioural aspects of the system to achieve modifiability and
+extensibility.
+4. Mapping models to code
+At the end of this section, students will be able to:
+c. Understand the importance of the disciplined approach of the
+transformation from model space into source code space.
+d. Develop GUI-based prototype for a simple database-based
+application.','ET 1, ET 2
+PA 1, PA 2
+PA 3
+PA 1
+PA 2, PA 3
+ET 1
+ET 2, ET 3', 0, 0, '', '', '', '', '', '', '', '', 0, '', '', '', 0, 0),('A','0','2019-20','ES1036','aouda@uwo.ca','Dr. Abdelkader Ouda, Ph.D. P.Eng','ES','A','519-661-2111 ext. 81299','This course is intended to establish a foundation for Computer Programming with specific emphasis on Engineering problems and applications. The course will cover the introductory aspects of Object-Oriented Analysis, Design, and Implementation (using Java and MATLAB) techniques, along with Testing according to the specified requirements of the program. Computer Programming will be treated as part of the Engineering Process, and as such will be contextualized through the course according to the Engineering  rofession','Monday, 12:30 - 2:30 pm','ACEB 4452','None','Course notes and supplementary material that are available at the Course Web site (OWL)','Tony Gaddis, Haywood Community College, Starting Out with Java: Early Objects, 6th
+Edition, ISBN: 9780134462011, 2017, Pearson.','5','10','15','20','50','D','','I','','','','','','','','','','1. Introduction to Computers and Java
+Introduces the field of software engineering, and covers the fundamentals of hardware, software, programming languages, and the software development process. Discussed through the examination of a simple program the elements of a program, such as key words, variables, operators, and punctuation. Present an overview of entering source code, compiling it, and
+executing it. Give a brief history of Java as well.
+At the end of this section, students will be able to:
+a. identify different components of a computer system,
+b. identify different steps in software development process,
+c. compile and run a Java program,
+d. use an IDE,
+e. relate the history and the releases of Java language.
+2. Java Fundamentals
+Introduces data types, identifiers, variable declarations, constants, comments, program output, and arithmetic operations. This introduction also includes the conventions of programming style.
+At the end of this section, students will be able to:
+a. understand different types of variable/constant declarations, different JAVA operators and standard input/output statements
+b. solve simple problems by writing the program (code) in JAVA language.
+3. Classes and Objects
+Introduces the student to classes. Once the student learns about fields and methods, UML diagrams are introduced as a design tool. Arguments and parameters are also discussed. Finally, the concept of the default constructor is discussed.
+At the end of this section, students will be able to:
+a. write simple void methods, as well as simple methods that return a value,
+b. write constructors and understand the concept of the default constructors,
+c. understand the concept of the Object-Oriented design
+d. identify classes and their responsibilities.
+e. write classes and create objects.
+f. understand the static methods and fields, interaction between objects, passing objects as arguments, and returning objects from methods. ','KB1
+ET2
+PA3', 0, 0, '', '', '', '', '', '', '', '', 0, '', '', '', 0, 0);
+
+
+INSERT INTO EditHistory (email, newComment, courseYear, courseCode, reviewFlag)
+VALUES
+('aouda@uwo.ca','Added more lecture hours because I have more content to teach', '2022-23', 'SE2203', 0),
+('ecedept@uwo.ca','Looks good!','2019-20', 'ES1036',1),
+('eceprogram@uwo.ca','Satisfactory course outline.','2020-21','SE3353',1),
+('ecechair@uwo.ca','I love it!','2022-23','SE2203',1);
+
+INSERT INTO PDFArchive (courseCode, courseYear, email, link)
+VALUES
+('ECE2233','2022-23','rrao@uwo.ca','https://www.eng.uwo.ca/electrical/pdf/course_outlines/Winter/MSE/MSE-2233B_2022-2023.pdf'),
+('ECE2233','2021-22','rrao@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/ECE-MSE-2233B-Winter-2022.pdf'),
+('ECE2277','2022-23','jmcleod7@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/ECE2277A_2022_23.pdf'),
+('ECE2277','2021-22','jmcleod7@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/ECE2277-2021-2022.pdf'),
+('ECE3375','2022-23','jmcleod7@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/ECE3375b-2022-23.pdf'),
+('ECE3375','2021-22','jmcleod7@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/ECE3375B-2021-22.pdf'),
+('ES1036','2020-21','qrahman3@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/ES1036B-2020-2021.pdf'),
+('ES1036','2021-22','aouda@uwo.ca','https://www.eng.uwo.ca/undergraduate/first-year/ES1036A-2021-2022.pdf'),
+('ES1036','2019-20','aouda@uwo.ca','https://www.eng.uwo.ca/files/undergraduate/first-year/ES-1036.pdf'),
+('ES1036','2018-19','kkamalmo@uwo.ca','https://www.eng.uwo.ca/electrical/pdf/ES1036_Intersession_2018-.pdf'),
+('ES1050','2022-23','jdickin5@uwo.ca','https://www.eng.uwo.ca/files/undergraduate/ES1050_22-23_Syllabus.pdf'),
+('MSE2233','2022-23','rrao@uwo.ca','https://www.eng.uwo.ca/electrical/pdf/course_outlines/Winter/MSE/MSE-2233B_2022-2023.pdf'),
+('MSE2233','2021-22','rrao@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/ECE-MSE-2233B-Winter-2022.pdf'),
+('SE2203','2021-22','aouda@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/SE2203B-Course-Outline-2021-2022.pdf'),
+('SE2203','2022-23','aouda@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/SE2203B-2022-2023.pdf'),
+('SE3350','2021-22','sali242@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/SE3350_2021-2022.pdf'),
+('SE3352','2022-23','sali242@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/SE3352_2022-23.pdf'),
+('SE3352','2021-22','sali242@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/SE3352-2021-2022.pdf'),
+('SE3353','2021-22','eagleson@uwo.ca','https://www.eng.uwo.ca/electrical/undergraduate/SE3353--2021-22.pdf');

@@ -1,0 +1,121 @@
+CREATE TABLE Users(
+email VARCHAR(40) NOT NULL UNIQUE, 
+name VARCHAR (40) NOT NULL,
+role VARCHAR (2) NOT NULL, CHECK (role  in ('I', 'DC', 'AC', 'PD', 'A')),
+Password VARCHAR(20),
+PRIMARY KEY (email)
+);
+
+CREATE TABLE Course (
+courseCode VARCHAR(10),
+courseName VARCHAR(100), 
+PRIMARY KEY (courseCode)
+);
+
+CREATE TABLE userAccess (
+email VARCHAR(40) NOT NULL,
+courseCode VARCHAR(10) NOT NULL, 
+PRIMARY KEY (email, courseCode),
+FOREIGN KEY (email) REFERENCES Users(email),
+FOREIGN KEY (courseCode) REFERENCES Course(courseCode)
+);
+
+CREATE TABLE PreReq(
+courseCode VARCHAR(10),
+preCode VARCHAR(10),
+PRIMARY KEY (courseCode, preCode),
+FOREIGN KEY (courseCode) REFERENCES Course(courseCode),
+FOREIGN KEY (preCode) REFERENCES Course(courseCode)
+);
+
+CREATE TABLE AntiReq(
+courseCode VARCHAR(10),
+antiCode VARCHAR(10),
+PRIMARY KEY (courseCode, antiCode),
+FOREIGN KEY (courseCode) REFERENCES Course(courseCode),
+FOREIGN KEY (antiCode) REFERENCES Course(courseCode)
+);
+
+CREATE TABLE CourseOutline (
+status VARCHAR(2) NOT NULL DEFAULT 'PR' CHECK (status IN('A', 'R', 'PR')),
+editable BOOL DEFAULT true,
+courseYear VARCHAR(9) NOT NULL,
+courseCode VARCHAR(12) NOT NULL,
+instructorMail VARCHAR(20) NOT NULL,
+instructorName VARCHAR(40) NOT NULL,
+department VARCHAR(5) NOT NULL,
+termLength CHAR,
+phoneNumber VARCHAR(50),
+description VARCHAR(1000),
+officeHours VARCHAR(50),
+office VARCHAR(10),
+textbook VARCHAR(500),
+otherResources VARCHAR(500),
+recommended VARCHAR(500),
+homework int,
+quizzes int,	
+labs int, 
+midterm int,
+final int,
+GA1 VARCHAR(3),
+GA2 VARCHAR(3),
+GA3 VARCHAR(3),
+GA4 VARCHAR(3),
+GA5 VARCHAR(3),
+GA6 VARCHAR(3),
+GA7 VARCHAR(3),
+GA8 VARCHAR(3),
+GA9 VARCHAR(3),
+GA10 VARCHAR(3),
+GA11 VARCHAR(3),
+GA12 VARCHAR(3),
+topicsText VARCHAR(4000),
+topicsGAIndicators VARCHAR(200),
+labHours FLOAT,
+TutorialHours FLOAT,
+HomeworkDesc VARCHAR(500),
+LabDesc VARCHAR(500),
+MidtermDesc VARCHAR(500),
+FinalDesc VARCHAR(500),
+LateSubmissionPolicy VARCHAR(500),
+Locker VARCHAR(100),
+ElecDevices VARCHAR(500),
+Clicker VARCHAR(500),
+LectureHours FLOAT,
+QuizzesDesc VARCHAR(500),
+gaJustification VARCHAR(500),
+academicCalendarCopy VARCHAR(700),
+academicUnitsEngSci int,
+academicUnitsEngDes int,
+PRIMARY KEY (courseYear, courseCode, instructorName),
+FOREIGN KEY (courseCode) REFERENCES Course (courseCode),
+FOREIGN KEY (instructorMail) REFERENCES Users(email)
+);
+
+CREATE TABLE GAIndicators(
+ga VARCHAR(6) NOT NULL
+);
+
+CREATE TABLE EditHistory (
+	email VARCHAR(40) NOT NULL,
+	editTime DATETIME DEFAULT CURRENT_TIMESTAMP(),
+	newComment VARCHAR(500) NOT NULL,
+	courseYear VARCHAR(9) NOT NULL,
+	courseCode VARCHAR(10) NOT NULL, 
+	reviewFlag boolean DEFAULT false,
+	PRIMARY KEY (email, editTime),
+	FOREIGN KEY (email) references Users(email),
+	FOREIGN KEY (courseYear) references CourseOutline(courseYear),
+	FOREIGN KEY (courseCode) references Course(courseCode)
+);
+
+
+CREATE TABLE PDFArchive (
+	courseCode VARCHAR(10) NOT NULL,
+	courseYear VARCHAR(9) NOT NULL,
+	email VARCHAR(40) NOT NULL,
+	link VARCHAR(2000),
+	PRIMARY KEY (email, courseCode, courseYear),
+	FOREIGN KEY (email) references Users(email),
+	FOREIGN KEY (courseCode) references Course(courseCode)
+);

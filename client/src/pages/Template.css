@@ -1,0 +1,175 @@
+@page {
+    size: A4;
+    margin: 1cm 1cm 1cm 1cm;
+    /* top right bottom left */
+}
+
+@media print {
+    #print-button {
+        display: none;
+    }
+}
+
+#body {
+    display: block;
+    margin-top: 8px;
+    /* margin: 25mm 25mm 25mm 25mm; */
+}
+
+#temp-title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#temp-container {
+    margin-top: -50px;
+}
+
+#temp-p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 50px;
+    margin-inline-end: 0px;
+    width: 50%;
+}
+
+#temp-p1 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 50px;
+    margin-inline-end: 0px;
+    width: 50%;
+    padding-left: 120px
+}
+
+#temp-table {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 50px;
+    margin-inline-end: 0px;
+    width: 100%;
+    /* padding-left: 120px; */
+    margin: 0;
+}
+
+#temp-tablex {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 50px;
+    margin-inline-end: 0px;
+    width: 100%;
+    /* padding-left: 29px; */
+    margin-right: 46px;
+}
+
+#temp-table2 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 50px;
+    margin-inline-end: 0px;
+    width: 100;
+    /* padding-left: 29px; */
+    margin-right: 46px;
+}
+
+#temp-table-ga {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 50px;
+    margin-inline-end: 0px;
+    width: 100;
+    /* padding-left: 29px; */
+    margin-right: 46px;
+    height: 170px;
+}
+
+#table {
+    width: 100px;
+}
+
+#template-values {
+    margin: 50px;
+    width: 370px;
+}
+
+#temp-text {
+    width: 71px;
+    height: 19px;
+    border: 0;
+    font-size: 12pt;
+}
+
+#temp-year {
+    width: 80px;
+    height: 19px;
+    border: 0;
+    font-size: 12pt;
+}
+
+#temp-coursetitle {
+    width: 500px;
+    height: 19px;
+    border: 0;
+    font-size: 12pt;
+    text-align: center;
+}
+
+#temp-phoneNo,
+#temp-email,
+#temp-name {
+    width: 200px;
+    height: 19px;
+    border: 0;
+    font-size: 12pt;
+}
+
+#temp-courses{
+    width: 400px;
+    height: 19px;
+    border: 0;
+    font-size: 12pt;
+}
+
+#temp-books {
+    width: 600px;
+    height: 19px;
+    border: 0;
+    font-size: 12pt;
+}
+
+#temp-hours {
+    width: 20px;
+    height: 19px;
+    border: 0;
+    font-size: 12pt;
+}
+
+#temp-percent {
+    width: 25px;
+    height: 19px;
+    border: 0;
+    font-size: 12pt;
+    margin-left: -20px;
+}
+
+#temp-ga {
+    width: 420px;
+    height: 175px;
+    margin-left: -30px;
+    border: 0;
+    font-size: 12pt;
+}
+
+#temp-desc {
+    width: 900px;
+    height: 50px;
+    border: 0;
+    font-size: 12pt;
+}
